@@ -19,8 +19,7 @@ func Signup(userRepo store.UserRepostitory) api.Handler {
 		if err != nil {
 			return err
 		}
-		_ = user
-		return nil
+		return api.SendJSON(rw, http.StatusOK, user)
 	}
 }
 
