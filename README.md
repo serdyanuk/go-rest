@@ -1,2 +1,2 @@
-# go-messenger
+# go-rest
 In progress....
