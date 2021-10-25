@@ -10,8 +10,8 @@ import (
 
 	"github.com/julienschmidt/httprouter"
 	"github.com/serdyanuk/go-rest/config"
-	"github.com/serdyanuk/go-rest/internal/app/handler"
-	"github.com/serdyanuk/go-rest/internal/app/middleware"
+	"github.com/serdyanuk/go-rest/internal/app/api/handler"
+	"github.com/serdyanuk/go-rest/internal/app/api/middleware"
 	"github.com/serdyanuk/go-rest/internal/app/store"
 	"github.com/serdyanuk/go-rest/internal/app/store/sqlstore"
 	"github.com/serdyanuk/go-rest/internal/pkg/logger"

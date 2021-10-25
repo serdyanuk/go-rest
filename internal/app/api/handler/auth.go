@@ -4,14 +4,14 @@ import (
 	"net/http"
 
 	"github.com/julienschmidt/httprouter"
-	"github.com/serdyanuk/go-rest/internal/app/core"
+	"github.com/serdyanuk/go-rest/internal/app/api"
 	"github.com/serdyanuk/go-rest/internal/app/store"
 )
 
-func Signup(userRepo store.UserRepostitory) core.Handler {
+func Signup(userRepo store.UserRepostitory) api.Handler {
 	return func(rw http.ResponseWriter, r *http.Request, p httprouter.Params) error {
 		signupInput := SignupInput{}
-		err := core.UnmarshalHTTPBody(r, &signupInput)
+		err := api.UnmarshalHTTPBody(r, &signupInput)
 		if err != nil {
 			return err
 		}
